@@ -9,8 +9,16 @@ define h = Character("陈平安")
 define k = Character("茅小冬")
 define narrator = Character(None)
 
+image s1 = "images/s1.png"
+
+transform zoom_150:
+    zoom 1080.0 / 2112
+    xalign 0.5
+    yalign 0.5
+
 
 label start:
+   
    
     voice "audio/李宝瓶1.mp3"
     a"三天后小师叔就要离开山崖书院了。李槐、裴钱他们最近经常偷偷摸摸聚在一起，就连小师叔都时不时失踪，唉"
@@ -201,6 +209,8 @@ label start:
 
     voice "audio/茅小冬1.mp3"
     k"以后常来"
+    
+    scene s1 at zoom_150
 
     voice "audio/崔东山13.mp3"
     b"你们该上课的上课，该给人上课的上课，剩下的一程就由我单独送送先生，散了散了吧。先生，我没有觉得如今世道，变得比以前更坏了。山上的修道人越来越多，山下的丰衣足食，其实更多。你觉得呢？"
