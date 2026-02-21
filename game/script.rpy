@@ -9,8 +9,10 @@ define h = Character("陈平安")
 define k = Character("茅小冬")
 define narrator = Character(None)
 
-image s1 = "images/s1.png"
 
+
+image s1 = "images/s1.png"
+image bg midnight_courtyard_return = "images/Midnight Courtyard Return.png"
 transform zoom_150:
     zoom 1080.0 / 2112
     xalign 0.5
@@ -19,7 +21,7 @@ transform zoom_150:
 
 label start:
    
-   
+    scene bg midnight_courtyard_return
     voice "audio/李宝瓶1.mp3"
     a"三天后小师叔就要离开山崖书院了。李槐、裴钱他们最近经常偷偷摸摸聚在一起，就连小师叔都时不时失踪，唉"
 
