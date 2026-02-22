@@ -13,6 +13,7 @@ define narrator = Character(None)
 
 image s1 = "images/s1.png"
 image bg midnight_courtyard_return = "images/Midnight Courtyard Return.png"
+image bg midnight_lake = "images/MidnightLake.png"
 transform zoom_150:
     zoom 1080.0 / 2112
     xalign 0.5
@@ -36,7 +37,8 @@ label start:
 
     voice "audio/李宝瓶5.mp3"
     a "昨晚就走了吗"
-
+    
+    scene bg midnight_lake
     voice "audio/崔东山.mp3"
     #这段音频需要分2段，
     b "哎哎，别多想，肯定是我家先生害怕看到你现在的模样
