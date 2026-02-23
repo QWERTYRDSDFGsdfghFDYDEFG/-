@@ -2,8 +2,7 @@
 define b = Character("崔东山")
 define c = Character("李槐")
 define d = Character("朱敛")
-define e = Character("朱敛")
-define f = Character("石柔")
+define e = Character("石柔")
 define g = Character("裴钱")
 define h = Character("陈平安")
 define k = Character("茅小冬")
@@ -14,7 +13,7 @@ define narrator = Character(None)
 image s1 = "images/s1.png"
 image bg midnight_courtyard_return = "images/Midnight Courtyard Return.png"
 image bg midnight_lake = "images/MidnightLake.png"
-image bg lihuai = "images/lihuai.png"
+image bg lihuai = im.Scale("images/lihuai .png", 1920, 1080)
 transform zoom_150:
     zoom 1080.0 / 2112
     xalign 0.5
