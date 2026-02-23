@@ -14,6 +14,7 @@ define narrator = Character(None)
 image s1 = "images/s1.png"
 image bg midnight_courtyard_return = "images/Midnight Courtyard Return.png"
 image bg midnight_lake = "images/MidnightLake.png"
+image bg lihuai = "images/lihuai.png"
 transform zoom_150:
     zoom 1080.0 / 2112
     xalign 0.5
@@ -56,7 +57,8 @@ label start:
     
     voice "audio/崔东山2.mp3"
     b "这样啊。"
-
+    
+    scene bg lihuai
     voice "audio/旁白1.mp3"
     narrator "湖水四周岸边小道上骤然间亮起一条光彩绚烂的金色光环，是以那把仙人飞剑金穗画出的一座雷池，此刻崔东山撤去了其中一部分障眼法。
     只见那李槐在远处湖边小路上，突然现身。只见这家伙手牵雪白麋鹿，学某人戴了一顶斗笠，悬佩狭刀祥符，腰间晃荡着一只银白色小葫芦。李宝瓶愣了愣。"
