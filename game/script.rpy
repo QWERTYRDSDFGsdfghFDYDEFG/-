@@ -14,6 +14,7 @@ image s1 = "images/s1.png"
 image bg midnight_courtyard_return = "images/Midnight Courtyard Return.png"
 image bg midnight_lake = "images/MidnightLake.png"
 image bg lihuai = im.Scale("images/lihuai .png", 1920, 1080)
+image bg Eclipse Combat = "images/Eclipse Combat.png"
 transform zoom_150:
     zoom 1080.0 / 2112
     xalign 0.5
@@ -64,7 +65,8 @@ label start:
    
     voice "audio/李槐1.mp3"
     c "我李槐闭关三天，终于学成了一身好武艺，这次下山闯荡江湖，要好好领教五湖四海各路豪杰的能耐。"
-
+    
+    scene bg Eclipse Combat 
     voice "audio/旁白2.mp3"
     narrator"只见高台不远处出现了两个身影，可怜朱敛和石柔，扮演那剪径匪寇，正在分别暴揍两个“文弱书生”于禄和林守一。"
 
