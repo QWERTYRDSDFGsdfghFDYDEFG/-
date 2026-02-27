@@ -16,6 +16,7 @@ image bg midnight_lake = "images/MidnightLake.png"
 image bg lihuai = im.Scale("images/lihuai .png", 1920, 1080)
 image bg Eclipse Combat = "images/Eclipse Combat.png"
 image bg Sword_Youth_Elder_Night = "images/Sword_Youth_Elder_Night.png"
+image bg DuskLakeDuet = "images/DuskLakeDuet.png"
 transform zoom_150:
     zoom 1080.0 / 2112
     xalign 0.5
@@ -101,7 +102,8 @@ label start:
 
     voice "audio/旁白4.mp3"
     narrator"接下来，只见于禄和谢谢出现在左右两侧的湖边，一人站而吹笛，一人坐而抚琴，像是那江湖上的神仙侠侣。笛声幽幽，琴声悠扬，越来越激昂慷慨。"
-
+    
+    scene bg DuskLakeDuet
     voice "audio/旁白5.mp3"
     narrator"李宝瓶所在高台正对面的湖岸那边，在崔东山微微一笑后，有一个黑瘦身影刹那之间出现，一路狂奔，以行山杖支撑在地，高高跃起，扑向湖中，在空中双手分别抽出腰间的竹刀竹剑，身形旋转落地，有模有样，十分霸气。
     每次裴钱落在湖面上，脚下就会出现一朵金色花朵，故而不用担心落水。"
