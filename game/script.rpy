@@ -8,8 +8,6 @@ define h = Character("陈平安")
 define k = Character("茅小冬")
 define narrator = Character(None)
 
-
-
 image s1 = "images/s1.png"
 image bg midnight_courtyard_return = "images/Midnight Courtyard Return.png"
 image bg midnight_lake = "images/MidnightLake.png"
@@ -19,6 +17,7 @@ image bg Sword_Youth_Elder_Night = "images/Sword_Youth_Elder_Night.png"
 image bg DuskLakeDuet = "images/DuskLakeDuet.png"
 image bg peiqian = "images/peiqian.png"
 image bg platform = "images/platform.png"
+image bg peiqian3 = "images/peiqian3.png"
 transform zoom_150:
     zoom 1080.0 / 2112
     xalign 0.5
@@ -121,7 +120,8 @@ label start:
     scene bg platform
     voice "audio/旁白8.mp3"
     narrator "一个站定，收起竹剑。裴钱站在距离高台不过七八丈外的湖面上，手腕翻转，突然变出那个手拈小葫芦，高高举起，仰头摆出饮酒状。"
-
+    
+    scene bg peiqian3
     voice "audio/裴钱1.mp3"
     g"江湖没什么好的，也就酒还行。酒呢，来来来！谁来与我共饮这江湖酒"
 
