@@ -17,6 +17,8 @@ image bg lihuai = im.Scale("images/lihuai .png", 1920, 1080)
 image bg Eclipse Combat = "images/Eclipse Combat.png"
 image bg Sword_Youth_Elder_Night = "images/Sword_Youth_Elder_Night.png"
 image bg DuskLakeDuet = "images/DuskLakeDuet.png"
+image bg peiqian = "images/peiqian.png"
+image bg platform = "images/platform.png"
 transform zoom_150:
     zoom 1080.0 / 2112
     xalign 0.5
@@ -99,11 +101,12 @@ label start:
 
     voice "audio/旁白3.mp3"
     narrator"崔东山打了个响指，李槐、雪白麋鹿与朱敛、石柔，还有于禄、林守一，都消失不见。"
-
+    
+    scene bg DuskLakeDuet
     voice "audio/旁白4.mp3"
     narrator"接下来，只见于禄和谢谢出现在左右两侧的湖边，一人站而吹笛，一人坐而抚琴，像是那江湖上的神仙侠侣。笛声幽幽，琴声悠扬，越来越激昂慷慨。"
     
-    scene bg DuskLakeDuet
+    scene bg peiqian
     voice "audio/旁白5.mp3"
     narrator"李宝瓶所在高台正对面的湖岸那边，在崔东山微微一笑后，有一个黑瘦身影刹那之间出现，一路狂奔，以行山杖支撑在地，高高跃起，扑向湖中，在空中双手分别抽出腰间的竹刀竹剑，身形旋转落地，有模有样，十分霸气。
     每次裴钱落在湖面上，脚下就会出现一朵金色花朵，故而不用担心落水。"
@@ -114,10 +117,11 @@ label start:
 
     voice "audio/旁白7.mp3"
     narrator" 这套独门绝学，她更是觉得天下无双；这一套剑法，裴钱打得酣畅淋漓，一气呵成。"
-
-    voice "audio/旁白8.mp3"
-    narrator"一个站定，收起竹剑。裴钱站在距离高台不过七八丈外的湖面上，手腕翻转，突然变出那个手拈小葫芦，高高举起，仰头摆出饮酒状。"
     
+    scene bg platform
+    voice "audio/旁白8.mp3"
+    narrator "一个站定，收起竹剑。裴钱站在距离高台不过七八丈外的湖面上，手腕翻转，突然变出那个手拈小葫芦，高高举起，仰头摆出饮酒状。"
+
     voice "audio/裴钱1.mp3"
     g"江湖没什么好的，也就酒还行。酒呢，来来来！谁来与我共饮这江湖酒"
 
