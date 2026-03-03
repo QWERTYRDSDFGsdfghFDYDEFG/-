@@ -8,7 +8,6 @@ define h = Character("陈平安")
 define k = Character("茅小冬")
 define narrator = Character(None)
 
-image s1 = "images/s1.png"
 image bg midnight_courtyard_return = "images/Midnight Courtyard Return.png"
 image bg midnight_lake = "images/MidnightLake.png"
 image bg lihuai = im.Scale("images/lihuai .png", 1920, 1080)
@@ -21,17 +20,16 @@ image bg peiqian3 = "images/peiqian3.png"
 image bg chengpinan = "images/chengpinan.png"
 image bg chengpinan2 = "images/chengpinan2.png"
 image bg chengpinan3 = "images/chengpinan3.png"
-transform zoom_150:
-    zoom 1080.0 / 2112
-    xalign 0.5
-    yalign 0.5
+image bg shuyuanko =  "images/shuyuanko.png" 
+image bg dasuei = im.Scale("images/dasuei.png", 1920, 1080) 
+
 
 
 label start:
    
     scene bg midnight_courtyard_return
     voice "audio/李宝瓶1.mp3"
-    a"三天后小师叔就要离开山崖书院了。李槐、裴钱他们最近经常偷偷摸摸聚在一起，就连小师叔都时不时失踪，唉"
+    a "三天后小师叔就要离开山崖书院了。李槐、裴钱他们最近经常偷偷摸摸聚在一起，就连小师叔都时不时失踪，唉"
 
     voice "audio/李宝瓶2.mp3"
     a"小师叔？小师叔？人呢？难道小师叔又偷偷走了？"
@@ -207,7 +205,8 @@ label start:
     scene bg chengpinan3
     voice "audio/陈平安3.mp3"
     h"夜游水神庙，日访城隍阁，一叶扁舟蛟龙沟，仙人背剑如列阵……世人皆说道理最无用，我却言那书中自有剑仙意，字字有剑光，且教圣贤看我一剑长气冲斗牛！"
-
+    
+    scene bg shuyuanko
     voice "audio/旁白12.mp3"
     narrator"一行人站在书院门口。
     陈平安已经背好长剑剑仙和那只大竹箱。
@@ -231,8 +230,8 @@ label start:
     voice "audio/茅小冬1.mp3"
     k"以后常来"
     
-    scene s1 at zoom_150
-
+    
+    scene bg dasuei
     voice "audio/崔东山13.mp3"
     b"你们该上课的上课，该给人上课的上课，剩下的一程就由我单独送送先生，散了散了吧。先生，我没有觉得如今世道，变得比以前更坏了。山上的修道人越来越多，山下的丰衣足食，其实更多。你觉得呢？"
 
