@@ -18,6 +18,9 @@ image bg DuskLakeDuet = "images/DuskLakeDuet.png"
 image bg peiqian = "images/peiqian.png"
 image bg platform = "images/platform.png"
 image bg peiqian3 = "images/peiqian3.png"
+image bg chengpinan = "images/chengpinan.png"
+image bg chengpinan2 = "images/chengpinan2.png"
+image bg chengpinan3 = "images/chengpinan3.png"
 transform zoom_150:
     zoom 1080.0 / 2112
     xalign 0.5
@@ -182,7 +185,8 @@ label start:
 
     voice "audio/李宝瓶7.mp3"
     a "小师叔！"
-
+    
+    scene bg chengpinan
     voice "audio/旁白10.mp3" 
     narrator"崔东山打了个响指，李槐众人都现出身形，所有人都望向东华山之巅，李宝瓶也转头望去。
     一抹雪白身影从山顶一掠而来，气势如虹，落在了湖面之上。一身金醴法袍飘荡不已，如一位白衣仙人站在了幽幽镜面。"
@@ -192,13 +196,15 @@ label start:
 
     voice "audio/崔东山12.mp3"
     b"走你！"
-
+    
+    scene bg chengpinan2
     voice "audio/陈平安1.mp3"
     h"世人皆言那积雪为粮、磨砖作镜，是痴儿，我偏要逆流而上，撞一撞那南墙！饮尽江湖酒，知晓世间理，我有一剑复一剑，剑剑更快，终有一天，一剑递出，便是天下头等风流快活剑……"
 
     voice "audio/陈平安2.mp3"
     h"仙人撩衣剑出袖，因势采剑画弧走。定式眉眼看剑尖，剑尖之上有江山。"
-
+    
+    scene bg chengpinan3
     voice "audio/陈平安3.mp3"
     h"夜游水神庙，日访城隍阁，一叶扁舟蛟龙沟，仙人背剑如列阵……世人皆说道理最无用，我却言那书中自有剑仙意，字字有剑光，且教圣贤看我一剑长气冲斗牛！"
 
