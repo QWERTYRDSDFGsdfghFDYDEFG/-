@@ -6,7 +6,16 @@ define e = Character("石柔")
 define g = Character("裴钱")
 define h = Character("陈平安")
 define k = Character("茅小冬")
+define a1 = Character("吴懿")
+define b1 = Character("")
+define c1 = Character("")
+define d1 = Character("")
+define e1 = Character("")
+define g1 = Character("")
+define h1 = Character("")
+define k1 = Character("")
 define narrator = Character(None)
+
 
 image bg midnight_courtyard_return = "images/Midnight Courtyard Return.png"
 image bg midnight_lake = "images/MidnightLake.png"
@@ -63,7 +72,6 @@ label start:
     b "这样啊。"
     
     scene bg lihuai
-    voice "audio/旁白1.mp3"
     narrator "湖水四周岸边小道上骤然间亮起一条光彩绚烂的金色光环，是以那把仙人飞剑金穗画出的一座雷池，此刻崔东山撤去了其中一部分障眼法。
     只见那李槐在远处湖边小路上，突然现身。只见这家伙手牵雪白麋鹿，学某人戴了一顶斗笠，悬佩狭刀祥符，腰间晃荡着一只银白色小葫芦。李宝瓶愣了愣。"
    
@@ -71,7 +79,6 @@ label start:
     c "我李槐闭关三天，终于学成了一身好武艺，这次下山闯荡江湖，要好好领教五湖四海各路豪杰的能耐。"
     
     scene bg Eclipse Combat 
-    voice "audio/旁白2.mp3"
     narrator"只见高台不远处出现了两个身影，可怜朱敛和石柔，扮演那剪径匪寇，正在分别暴揍两个“文弱书生”于禄和林守一。"
     
     scene bg Sword_Youth_Elder_Night
@@ -99,7 +106,6 @@ label start:
     voice "audio/李槐6.mp3"
     c "记住了，我就是龙泉郡总舵、东华山分舵、学舍小舵舵主李槐！江湖人称双拳无敌手、两脚踏山岳的‘拳脚双绝’李大侠，我们的总舵主，便是威震天下、一统千秋的当代武林盟主——李！宝！瓶！"
 
-    voice "audio/旁白3.mp3"
     narrator"崔东山打了个响指，李槐、雪白麋鹿与朱敛、石柔，还有于禄、林守一，都消失不见。"
     
     scene bg DuskLakeDuet
@@ -107,19 +113,15 @@ label start:
     narrator"接下来，只见于禄和谢谢出现在左右两侧的湖边，一人站而吹笛，一人坐而抚琴，像是那江湖上的神仙侠侣。笛声幽幽，琴声悠扬，越来越激昂慷慨。"
     
     scene bg peiqian
-    voice "audio/旁白5.mp3"
     narrator"李宝瓶所在高台正对面的湖岸那边，在崔东山微微一笑后，有一个黑瘦身影刹那之间出现，一路狂奔，以行山杖支撑在地，高高跃起，扑向湖中，在空中双手分别抽出腰间的竹刀竹剑，身形旋转落地，有模有样，十分霸气。
     每次裴钱落在湖面上，脚下就会出现一朵金色花朵，故而不用担心落水。"
 
-    voice "audio/旁白6.mp3"
     narrator"裴钱先以竹刀表演了一记白猿拖刀式，一鼓作气势如虎，笔直一线，奔出十数丈后，向崔东山这边高台大喝一声，重重劈出一刀。
     然后脚尖一点，踩在崔东山帮忙驾驭而出的金色花朵上，身形猛然拧转，将竹刀别回腰间，落地后，以那套她自创的疯魔剑法继续向前狂奔。"
 
-    voice "audio/旁白7.mp3"
     narrator" 这套独门绝学，她更是觉得天下无双；这一套剑法，裴钱打得酣畅淋漓，一气呵成。"
     
     scene bg platform
-    voice "audio/旁白8.mp3"
     narrator "一个站定，收起竹剑。裴钱站在距离高台不过七八丈外的湖面上，手腕翻转，突然变出那个手拈小葫芦，高高举起，仰头摆出饮酒状。"
     
     scene bg peiqian3
@@ -182,11 +184,9 @@ label start:
     a "小师叔！"
     
     scene bg chengpinan
-    voice "audio/旁白10.mp3" 
     narrator"崔东山打了个响指，李槐众人都现出身形，所有人都望向东华山之巅，李宝瓶也转头望去。
     一抹雪白身影从山顶一掠而来，气势如虹，落在了湖面之上。一身金醴法袍飘荡不已，如一位白衣仙人站在了幽幽镜面。"
 
-    voice "audio/旁白11.mp3"
     narrator"陈平安并没有背负那把剑仙，只是腰间挂了一只养剑葫。陈平安一伸手，崔东山从咫尺物当中取出一把长剑"
 
     voice "audio/崔东山12.mp3"
@@ -204,7 +204,6 @@ label start:
     h"夜游水神庙，日访城隍阁，一叶扁舟蛟龙沟，仙人背剑如列阵……世人皆说道理最无用，我却言那书中自有剑仙意，字字有剑光，且教圣贤看我一剑长气冲斗牛！"
     
     scene bg shuyuanko
-    voice "audio/旁白12.mp3"
     narrator"一行人站在书院门口。
     陈平安已经背好长剑剑仙和那只大竹箱。
     裴钱斜挎包裹，手持行山杖，腰悬刀剑错。朱敛和石柔站在一旁。李槐与裴钱一番窃窃私语，约好了以后一定要一起闯荡江湖"
@@ -245,7 +244,6 @@ label start:
     voice "audio/陈平安8.mp3"
     h"你能这么想，我觉得很好.先生读书还不多，学识浅薄，暂时给不了你答案，但是我会多想想，哪怕最后还是给不出答案，也会告诉你，先生想不明白，学生把先生给难住了，到了那时候，学生不要笑话先生。"
 
-    voice "audio/旁白13.mp3"
     narrator"这大概是陈平安生平第一次承认，自己是崔东山的先生。"
 
     voice "audio/崔东山16.mp3"
@@ -257,5 +255,7 @@ label start:
     voice "audio/崔东山17.mp3"
     b"愿先生心境，四季如春。"
 
+    # after finishing the introductory sequence, move into chapter 2
+    jump chapter2_start
 
     return
