@@ -3,11 +3,11 @@ define b = Character("崔东山")
 define c = Character("李槐")
 define d = Character("朱敛")
 define e = Character("石柔")
-define g = Character("裴钱")
-define h = Character("陈平安")
+define peiqian = Character("裴钱")
+define chenpingan = Character("陈平安")
 define k = Character("茅小冬")
 define a1 = Character("吴懿")
-define b1 = Character("")
+define b1 = Character("董水井")
 define c1 = Character("")
 define d1 = Character("")
 define e1 = Character("")
@@ -126,13 +126,13 @@ label start:
     
     scene bg peiqian3
     voice "audio/裴钱1.mp3"
-    g"江湖没什么好的，也就酒还行。酒呢，来来来！谁来与我共饮这江湖酒"
+    peiqian"江湖没什么好的，也就酒还行。酒呢，来来来！谁来与我共饮这江湖酒"
 
     voice "audio/崔东山3.mp3"
     b"我来"
 
     voice "audio/裴钱2.mp3"
-    g"好酒"
+    peiqian"好酒"
 
     voice "audio/崔东山4.mp3"
     b"好酒好酒"
@@ -141,38 +141,38 @@ label start:
     b"店小二，我读了些书，认了好些字，攒了一肚子学问，卖不了几文钱。"
 
     voice "audio/裴钱3.mp3"
-    g"臭豆腐好吃买不起哟" 
+    peiqian"臭豆腐好吃买不起哟" 
 
     voice "audio/崔东山6.mp3"
     b"山上有魑魅魍魉，湖泽江河有水鬼，吓得一转头，原来离家好多年。"
 
     voice "audio/裴钱4.mp3"
-    g"吓得我赶紧吃块臭豆腐压压惊哟"
+    peiqian"吓得我赶紧吃块臭豆腐压压惊哟"
 
     voice "audio/崔东山7.mp3"
     b"哪家的小姑娘，身上带着兰花香，为何哭花了脸，你说可怜不可怜？"
 
     voice "audio/裴钱5.mp3"
-    g"吃臭豆腐哟，臭豆腐跟兰花一样香哟！"
+    peiqian"吃臭豆腐哟，臭豆腐跟兰花一样香哟！"
 
     voice "audio/崔东山8.mp3"
     b"试问夫子先生怎么办，树枝上挂着一只晒着日头的小纸鸢。"
 
     voice "audio/裴钱6.mp3"
-    g"爬树摘下小纸鸢，回家吃臭豆腐喽！"
+    peiqian"爬树摘下小纸鸢，回家吃臭豆腐喽！"
 
     voice "audio/崔东山9.mp3"
     b"坟前烧香神仙若少年，坟中子孙白骨已百年，你说可笑不可笑？"
     #这是崔东山在胡说八道呢，
 
     voice "audio/裴钱7.mp3"
-    g"唉？臭豆腐到底给谁吃哟？"
+    peiqian"唉？臭豆腐到底给谁吃哟？"
 
     voice "audio/崔东山10.mp3"
     b"你讲你的理，我有我的拳，江湖纷纷扰扰，恩怨到底何时了？"
 
     voice "audio/裴钱8.mp3"
-    g"你再这样，我可连臭豆腐也要吃撑了哟！"
+    peiqian"你再这样，我可连臭豆腐也要吃撑了哟！"
 
     voice "audio/崔东山11.mp3"
     b"吃过了臭豆腐，喝过了酒，剑仙呢？"
@@ -194,14 +194,14 @@ label start:
     
     scene bg chengpinan2
     voice "audio/陈平安1.mp3"
-    h"世人皆言那积雪为粮、磨砖作镜，是痴儿，我偏要逆流而上，撞一撞那南墙！饮尽江湖酒，知晓世间理，我有一剑复一剑，剑剑更快，终有一天，一剑递出，便是天下头等风流快活剑……"
+    chenpingan"世人皆言那积雪为粮、磨砖作镜，是痴儿，我偏要逆流而上，撞一撞那南墙！饮尽江湖酒，知晓世间理，我有一剑复一剑，剑剑更快，终有一天，一剑递出，便是天下头等风流快活剑……"
 
     voice "audio/陈平安2.mp3"
-    h"仙人撩衣剑出袖，因势采剑画弧走。定式眉眼看剑尖，剑尖之上有江山。"
+    chenpingan"仙人撩衣剑出袖，因势采剑画弧走。定式眉眼看剑尖，剑尖之上有江山。"
     
     scene bg chengpinan3
     voice "audio/陈平安3.mp3"
-    h"夜游水神庙，日访城隍阁，一叶扁舟蛟龙沟，仙人背剑如列阵……世人皆说道理最无用，我却言那书中自有剑仙意，字字有剑光，且教圣贤看我一剑长气冲斗牛！"
+    chenpingan"夜游水神庙，日访城隍阁，一叶扁舟蛟龙沟，仙人背剑如列阵……世人皆说道理最无用，我却言那书中自有剑仙意，字字有剑光，且教圣贤看我一剑长气冲斗牛！"
     
     scene bg shuyuanko
     narrator"一行人站在书院门口。
@@ -212,16 +212,16 @@ label start:
     c"到了龙泉郡，一定记得帮忙看看我家宅子啊。"
 
     voice "audio/陈平安4.mp3"
-    h"没问题。你们都去学堂上课吧，不用送了，已经耽搁了不少时间，估计夫子们以后不太愿意再看到我了。"
+    chenpingan"没问题。你们都去学堂上课吧，不用送了，已经耽搁了不少时间，估计夫子们以后不太愿意再看到我了。"
 
     voice "audio/李宝瓶8.mp3"
     a"小师叔，路上小心。"
 
     voice "audio/陈平安5.mp3"
-    h"小师叔还要你说。"
+    chenpingan"小师叔还要你说。"
 
     voice "audio/陈平安6.mp3"
-    h"茅山主告辞了。"
+    chenpingan"茅山主告辞了。"
 
     voice "audio/茅小冬1.mp3"
     k"以后常来"
@@ -232,7 +232,7 @@ label start:
     b"你们该上课的上课，该给人上课的上课，剩下的一程就由我单独送送先生，散了散了吧。先生，我没有觉得如今世道，变得比以前更坏了。山上的修道人越来越多，山下的丰衣足食，其实更多。你觉得呢？"
 
     voice "audio/陈平安7.mp3"
-    h"应该是这样的。"
+    chenpingan"应该是这样的。"
 
     voice "audio/崔东山14.mp3"
     b"但是不可否认，高出大地的山峰，像一把把剑一样，直指天幕的那些山峰，每百年千年之间，它们出现的次数，确实越来越少了。
@@ -242,7 +242,7 @@ label start:
     b"更高处的天空中，总要有一两声鹤唳嘶鸣，离地很远，可就是会让人感到悲伤。仰头见过了，听过了，就让人再难忘记。"
 
     voice "audio/陈平安8.mp3"
-    h"你能这么想，我觉得很好.先生读书还不多，学识浅薄，暂时给不了你答案，但是我会多想想，哪怕最后还是给不出答案，也会告诉你，先生想不明白，学生把先生给难住了，到了那时候，学生不要笑话先生。"
+    chenpingan"你能这么想，我觉得很好.先生读书还不多，学识浅薄，暂时给不了你答案，但是我会多想想，哪怕最后还是给不出答案，也会告诉你，先生想不明白，学生把先生给难住了，到了那时候，学生不要笑话先生。"
 
     narrator"这大概是陈平安生平第一次承认，自己是崔东山的先生。"
 
@@ -250,12 +250,11 @@ label start:
     b"故乡垄头，陌上花开，先生可以缓缓归矣。"
 
     voice "audio/陈平安9.mp3"
-    h"这都入秋了。"
+    chenpingan"这都入秋了。"
 
     voice "audio/崔东山17.mp3"
     b"愿先生心境，四季如春。"
 
-    # after finishing the introductory sequence, move into chapter 2
     jump chapter2_start
 
     return
