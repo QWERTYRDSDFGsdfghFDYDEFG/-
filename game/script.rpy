@@ -4,7 +4,7 @@ define c = Character("李槐")
 define d = Character("朱敛")
 define e = Character("石柔")
 define peiqian = Character("裴钱")
-define chenpingan = Character("陈平安")
+define cpa = Character("陈平安")
 define k = Character("茅小冬")
 define a1 = Character("吴懿")
 define donsujing = Character("董水井")
@@ -12,8 +12,9 @@ define c1 = Character("高煊")
 define xuluo = Character("许弱")
 define ruanxiu = Character("阮秀")
 define xuxiaoqiao = Character("徐小桥")
-define h1 = Character("")
-define k1 = Character("")
+define h1 = Character("吴鸢")
+define k1 = Character("阮邛")
+define k2 = Character("崔瀺")
 define narrator = Character(None)
 
 
@@ -194,14 +195,14 @@ label start:
     
     scene bg chengpinan2
     voice "audio/陈平安1.mp3"
-    chenpingan"世人皆言那积雪为粮、磨砖作镜，是痴儿，我偏要逆流而上，撞一撞那南墙！饮尽江湖酒，知晓世间理，我有一剑复一剑，剑剑更快，终有一天，一剑递出，便是天下头等风流快活剑……"
+    cpa"世人皆言那积雪为粮、磨砖作镜，是痴儿，我偏要逆流而上，撞一撞那南墙！饮尽江湖酒，知晓世间理，我有一剑复一剑，剑剑更快，终有一天，一剑递出，便是天下头等风流快活剑……"
 
     voice "audio/陈平安2.mp3"
-    chenpingan"仙人撩衣剑出袖，因势采剑画弧走。定式眉眼看剑尖，剑尖之上有江山。"
+    cpa"仙人撩衣剑出袖，因势采剑画弧走。定式眉眼看剑尖，剑尖之上有江山。"
     
     scene bg chengpinan3
     voice "audio/陈平安3.mp3"
-    chenpingan"夜游水神庙，日访城隍阁，一叶扁舟蛟龙沟，仙人背剑如列阵……世人皆说道理最无用，我却言那书中自有剑仙意，字字有剑光，且教圣贤看我一剑长气冲斗牛！"
+    cpa"夜游水神庙，日访城隍阁，一叶扁舟蛟龙沟，仙人背剑如列阵……世人皆说道理最无用，我却言那书中自有剑仙意，字字有剑光，且教圣贤看我一剑长气冲斗牛！"
     
     scene bg shuyuanko
     narrator"一行人站在书院门口。
@@ -212,16 +213,16 @@ label start:
     c"到了龙泉郡，一定记得帮忙看看我家宅子啊。"
 
     voice "audio/陈平安4.mp3"
-    chenpingan"没问题。你们都去学堂上课吧，不用送了，已经耽搁了不少时间，估计夫子们以后不太愿意再看到我了。"
+    cpa"没问题。你们都去学堂上课吧，不用送了，已经耽搁了不少时间，估计夫子们以后不太愿意再看到我了。"
 
     voice "audio/李宝瓶8.mp3"
     a"小师叔，路上小心。"
 
     voice "audio/陈平安5.mp3"
-    chenpingan"小师叔还要你说。"
+    cpa"小师叔还要你说。"
 
     voice "audio/陈平安6.mp3"
-    chenpingan"茅山主告辞了。"
+    cpa"茅山主告辞了。"
 
     voice "audio/茅小冬1.mp3"
     k"以后常来"
@@ -232,7 +233,7 @@ label start:
     b"你们该上课的上课，该给人上课的上课，剩下的一程就由我单独送送先生，散了散了吧。先生，我没有觉得如今世道，变得比以前更坏了。山上的修道人越来越多，山下的丰衣足食，其实更多。你觉得呢？"
 
     voice "audio/陈平安7.mp3"
-    chenpingan"应该是这样的。"
+    cpa"应该是这样的。"
 
     voice "audio/崔东山14.mp3"
     b"但是不可否认，高出大地的山峰，像一把把剑一样，直指天幕的那些山峰，每百年千年之间，它们出现的次数，确实越来越少了。
@@ -242,7 +243,7 @@ label start:
     b"更高处的天空中，总要有一两声鹤唳嘶鸣，离地很远，可就是会让人感到悲伤。仰头见过了，听过了，就让人再难忘记。"
 
     voice "audio/陈平安8.mp3"
-    chenpingan"你能这么想，我觉得很好.先生读书还不多，学识浅薄，暂时给不了你答案，但是我会多想想，哪怕最后还是给不出答案，也会告诉你，先生想不明白，学生把先生给难住了，到了那时候，学生不要笑话先生。"
+    cpa"你能这么想，我觉得很好.先生读书还不多，学识浅薄，暂时给不了你答案，但是我会多想想，哪怕最后还是给不出答案，也会告诉你，先生想不明白，学生把先生给难住了，到了那时候，学生不要笑话先生。"
 
     narrator"这大概是陈平安生平第一次承认，自己是崔东山的先生。"
 
@@ -250,7 +251,7 @@ label start:
     b"故乡垄头，陌上花开，先生可以缓缓归矣。"
 
     voice "audio/陈平安9.mp3"
-    chenpingan"这都入秋了。"
+    cpa"这都入秋了。"
 
     voice "audio/崔东山17.mp3"
     b"愿先生心境，四季如春。"
