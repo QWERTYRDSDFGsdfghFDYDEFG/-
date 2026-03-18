@@ -1,7 +1,7 @@
 ﻿define a = Character("李宝瓶")
 define b = Character("崔东山")
 define c = Character("李槐")
-define d = Character("朱敛")
+define zl = Character("朱敛")
 define e = Character("石柔")
 define peiqian = Character("裴钱")
 define cpa = Character("陈平安")
@@ -87,13 +87,13 @@ label start:
     c "住手！"
 
     voice "audio/朱敛1.mp3"
-    d "你一样要留下过路钱，交出买命财！"
+    zl "你一样要留下过路钱，交出买命财！"
 
     voice "audio/李槐3.mp3" 
     c "不长眼的小小毛贼，也敢打劫我李大侠，我今天就要路见不平一声吼，你们有本事就只管来取。哈哈哈。你没吃饭吧"
 
     voice "audio/朱敛2.mp3"
-    d "这这这位……少侠……好深的内力！"
+    zl "这这这位……少侠……好深的内力！"
 
     voice "audio/李槐4.mp3" 
     c "滚开！"
