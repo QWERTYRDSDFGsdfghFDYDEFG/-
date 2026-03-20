@@ -1,40 +1,4 @@
-﻿define a = Character("李宝瓶")
-define b = Character("崔东山")
-define c = Character("李槐")
-define zl = Character("朱敛")
-define e = Character("石柔")
-define peiqian = Character("裴钱")
-define cpa = Character("陈平安")
-define k = Character("茅小冬")
-define wy = Character("吴懿")
-define donsujing = Character("董水井")
-define c1 = Character("高煊")
-define xuluo = Character("许弱")
-define ruanxiu = Character("阮秀")
-define xuxiaoqiao = Character("徐小桥")
-define h1 = Character("吴鸢")
-define k1 = Character("阮邛")
-define k2 = Character("崔瀺")
-define narrator = Character(None)
-
-
-image bg midnight_courtyard_return = "images/Midnight Courtyard Return.png"
-image bg midnight_lake = "images/MidnightLake.png"
-image bg lihuai = im.Scale("images/lihuai .png", 1920, 1080)
-image bg Eclipse Combat = "images/Eclipse Combat.png"
-image bg Sword_Youth_Elder_Night = "images/Sword_Youth_Elder_Night.png"
-image bg DuskLakeDuet = "images/DuskLakeDuet.png"
-image bg peiqian = "images/peiqian.png"
-image bg platform = "images/platform.png"
-image bg peiqian3 = "images/peiqian3.png"
-image bg chengpinan = "images/chengpinan.png"
-image bg chengpinan2 = "images/chengpinan2.png"
-image bg chengpinan3 = "images/chengpinan3.png"
-image bg shuyuanko =  "images/shuyuanko.png" 
-image bg dasuei = im.Scale("images/dasuei.png", 1920, 1080) 
-
-
-
+﻿
 label start:
    
     scene bg midnight_courtyard_return
