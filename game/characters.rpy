@@ -5,7 +5,7 @@ define zl = Character("朱敛")
 define e = Character("石柔")
 define peiqian = Character("裴钱")
 define cpa = Character("陈平安")
-#陈平安的配音主要内容可以采用，不重要不需要
+#陈平安的配音与人对话可以采用，心里不需要
 define k = Character("茅小冬")
 define wy = Character("吴懿")
 define donsujing = Character("董水井")
