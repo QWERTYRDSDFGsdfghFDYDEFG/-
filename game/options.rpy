@@ -120,6 +120,18 @@ default preferences.text_cps = 0
 default preferences.afm_time = 15
 
 
+## 自动保存 ########################################################################
+
+## 每隔多少次交互自动保存一次（默认 200，这里设为 10 以便更频繁地保存进度）。
+define config.autosave_frequency = 10
+
+## 自动保存槽位数量（默认 10）。
+define config.autosave_slots = 10
+
+## 在每次选项（menu）出现前自动保存。
+define config.autosave_on_choice = True
+
+
 ## 存档目录 ########################################################################
 ##
 ## 控制 Ren'Py 放置游戏存档的特定操作系统目录。存档文件将放置在：

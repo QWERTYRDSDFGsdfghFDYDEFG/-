@@ -1,6 +1,8 @@
 ﻿
 label start:
-   
+
+    $ renpy.force_autosave()
+
     scene bg midnight_courtyard_return
     voice "audio/李宝瓶1.mp3"
     a "三天后小师叔就要离开山崖书院了。李槐、裴钱他们最近经常偷偷摸摸聚在一起，就连小师叔都时不时失踪，唉"

@@ -1,5 +1,7 @@
 label chapter3_start:
 
+    $ renpy.force_autosave()
+
     wy "紫阳府到了，我们下船吧。"
 
     narrator "积香庙小神，拜见洞灵老祖，在此叩谢老祖的大恩大德！"
