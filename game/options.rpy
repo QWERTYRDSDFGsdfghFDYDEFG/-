@@ -11,7 +11,7 @@
 ##
 ## 带有 _() 的字符串表示其可被翻译。
 
-define config.name = _("When the Sword Arrives")
+define config.name = _("Jianlai-When-the-Sword-Arrives")
 
 
 ## 决定上面给出的标题是否显示在标题界面屏幕。设置为 False 来隐藏标题。
@@ -34,7 +34,7 @@ define gui.about = _p("""
 ## 在构建的发布版中，可执行文件和目录所使用的短名称。此处仅限使用 ASCII 字符，并
 ## 且不能包含空格、冒号或分号。
 
-define build.name = "WhentheSwordArrives"
+define build.name = "Jianlai-When-the-Sword-Arrives"
 
 
 ## 音效和音乐 #######################################################################

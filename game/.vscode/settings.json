@@ -2,8 +2,10 @@
     "files.exclude": {
         "**/*.rpyc": true,
         "**/*.rpa": true,
+        "**/*.rpyb": true,
         "**/*.rpymc": true,
-        "**/cache/": true
+        "**/cache/": true,
+        "**/saves/": true
     },
     "editor.tokenColorCustomizations": {
         "textMateRules": [
