@@ -773,7 +773,6 @@ label chapter8_start:
     cpa "推开心扉大门，住下了。"
     cpa "打不死，赶不走。"
 
-    return
 
 
  
