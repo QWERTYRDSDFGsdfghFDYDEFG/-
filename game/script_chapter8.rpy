@@ -774,6 +774,6 @@ label chapter8_start:
     cpa "打不死，赶不走。"
 
 
-
+    jump chapter9_start
  
     return
