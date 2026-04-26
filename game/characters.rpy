@@ -24,12 +24,19 @@ define lmx = Character("李牧玺")
 define slz = Character("宋郎中")
 define thj = Character("田湖君")
 define gc = Character("顾璨")
-define ylt = Character("杨老神仙")
+define ylt = Character("杨老头")
 define fy = Character("范彦")
 define lcs = Character("吕采桑")
 define yy = Character("圆圆")
 define xnq = Character("徐小桥")
 define znr = Character("中年男人")
+define lcr = Character("刘重润")
+define hs = Character("红酥")
+define mxgx = Character("马姓鬼修")
+define lcr = Character("刘重润")
+define yh = Character("俞桧")
+
+
 
 
 define narrator = Character(None)
