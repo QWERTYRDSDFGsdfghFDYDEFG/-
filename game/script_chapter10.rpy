@@ -393,7 +393,6 @@
 
     narrator "随后撑船离开。"
 
-  
     narrator "到了渡口，收起那张符胆神光"
     narrator "越来越黯淡的日夜游神真身符，藏入袖中。"
     narrator "随后撑船离开。"

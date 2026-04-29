@@ -2,125 +2,119 @@ label chapter11_start:
 
     $ renpy.force_autosave()
 
+    narrator "晚上，陈平安打开食盒。"
+    narrator "在饭桌前默默吃着宵夜。"
+    narrator "陈平安还在等桐叶洲太平山的回信。"
+    narrator "即便魏檗已经给出了所有的答案，"
+    narrator "也不是陈平安不相信这位云遮雾绕的神水国旧神祇。"
+    narrator "而是接下来陈平安需要做的事情，"
+    narrator "不管如何求全求真，"
+    narrator "都不为过。"
+    narrator "陈平安吃完了宵夜，装好食盒。"
+    narrator "摊开手边一份邸报，"
+    narrator "开始浏览。"
+    narrator "上边写了时下书简湖的一些趣闻趣事。"
+    narrator "跟世俗王朝驿骑发送至官署案边的官场邸报，"
+    narrator "差不多性质。"
+    narrator "其实当初游历途中，"
+    narrator "在青鸾国百花苑客栈，"
+    narrator "陈平安就曾经见识过这类仙家邸报的奇妙。"
+    narrator "在书简湖待久了，"
+    narrator "陈平安也入乡随俗。"
+    narrator "让顾璨帮忙要了一份仙家邸报。"
+    narrator "只要一有新鲜出炉的邸报，"
+    narrator "就让人送来。"
+    narrator "宫柳岛上几乎每天都会有趣事。"
+    narrator "当天发生，"
+    narrator "第二天就能够传遍书简湖。"
+
     narrator "陈平安走出屋子。"
     narrator "这次没有忘记吹灭书案与饭桌上的两盏灯火。"
-
     narrator "过了青峡岛山门，"
     narrator "来到渡口那艘渡船。"
-
     narrator "站在湖边，陈平安并未背负剑仙。"
     narrator "只穿着青衫长褂。"
-
     narrator "天地寂寥，四下无人。"
     narrator "湖上仿佛铺满了碎银。"
-
     narrator "入冬后的夜风微寒。"
     narrator "这让陈平安在练拳跻身第五境，"
     narrator "尤其是身穿法袍金醴之后，"
     narrator "终于感受到了久违的人间节气冷暖。"
-
     narrator "随着江湖越走越远，"
     narrator "尤其是看过了越来越多的官场和山上光景，"
     narrator "陈平安就越来越佩服阮师傅对于师徒关系的看法。"
     narrator "也越来越佩服崔东山教他的那场棋外棋。"
-
     narrator "阮邛收取弟子，"
     narrator "不是为了师父哪天与人争执，"
     narrator "弟子在旁起哄，大肆攻讦对手。"
     narrator "或是不问是非，"
     narrator "毅然决然投身战场。"
-
     narrator "阮邛曾言，"
     narrator "我只收取那同道中人做弟子。"
     narrator "而不是收取一些只知道为我卖命的徒弟门生。"
-
     narrator "人生之难，难在意难平。"
     narrator "更难在最重要的人，"
     narrator "也会让你意难平。"
-
     narrator "不过这只是好人之难。"
     narrator "到底是更多的人，"
     narrator "从来不思量这些的。"
-
     narrator "世道打了我一拳，"
     narrator "我凭什么不能还一脚？"
-
     narrator "世人胆敢一拳打得我满脸血污，"
     narrator "害我心里不痛快。"
     narrator "我就定要打得世人粉身碎骨。"
-
     narrator "至于会不会伤及无辜，"
     narrator "是不是死有余辜，"
     narrator "想也不想。"
-
     narrator "这是不对的。"
-
     narrator "修力是立身之本。"
     narrator "修心是登高之路。"
-
     narrator "大道之上，仗剑直行也好，"
     narrator "负笈游学也罢。"
     narrator "偶尔总要给人让让路。"
-
     narrator "陈平安面容愁苦。"
     narrator "只觉得天大地大，"
     narrator "这些言语，就只能憋在肚子里。"
     narrator "没有人会听。"
-
     narrator "陈平安心思微动，想了想。"
     narrator "从咫尺物当中取出一块黑炭。"
-
     narrator "他在渡口画了一个大圈。"
     narrator "然后弯腰在圆圈之中，"
     narrator "缓缓画出一条直线。"
     narrator "将圆圈一分为二。"
-
     narrator "陈平安蹲在那条线旁边，"
     narrator "久久没有动笔，眉头紧皱。"
-
     narrator "神色萎靡的账房先生，"
     narrator "只得摘下腰间养剑葫。"
     narrator "喝一口乌啼酒提神。"
-
     narrator "这才在那条直线上下，"
     narrator "各自写了一个“善”和“恶”。"
-
     narrator "陈平安今夜要在那个曾经在心路上停步、"
     narrator "不愿深思、也无力去深究的“一”字上，"
     narrator "跨出一步。"
-
     narrator "就像泥瓶巷草鞋少年，"
     narrator "当年走在廊桥之上。"
-
     narrator "陈平安蹲在地上。"
     narrator "在那条直线上，"
     narrator "在“善”“恶”二字之间，"
     narrator "轻轻写下“以人为本”四个字。"
-
     cpa "暂时只能想这么多。"
-
     narrator "陈平安闭上眼睛，"
     narrator "又喝了一口酒。"
     narrator "睁开眼睛，站起身。"
-
     narrator "他大步走到“善”那个半圆的边缘，"
     narrator "一气呵成。"
     narrator "到“恶”这个半圈的另外一段，"
     narrator "画出了一条斜线。"
-
     narrator "挪步，从下往上，"
     narrator "又画出一条斜线。"
-
     narrator "最终，一个圆圈，"
     narrator "已经被陈平安切割成六块。"
     narrator "交集只有那个圆心一点。"
-
     narrator "之后，陈平安好像豁然开朗。"
     narrator "快步走到那条直线上的“善”字半圆当中。"
-
     narrator "在这三块区域居中的那块扇形上，"
     narrator "手中炭笔挥洒如飞。"
-
     cpa "若说这是本心向善的赤诚之心，"
     cpa "且最为坚定，心智不易移动。"
     cpa "那么在这块地方的世人，"
@@ -135,14 +129,11 @@ label chapter11_start:
     cpa "也愿意坐而闻道，起而行之。"
     cpa "无论世道如何困苦，"
     cpa "也会坚守本心！"
-
     narrator "陈平安快速起身。"
     narrator "退到与那个半圆写满炭字区域，"
     narrator "针锋相对的“恶”之半圆居中地带。"
-
     narrator "他蹲下身。"
     narrator "一样是炭笔哗哗而写。"
-
     cpa "人性本恶。"
     cpa "此恶并非一味贬义，"
     cpa "而是阐述了人心中另外一种本性。"
@@ -165,7 +156,6 @@ label chapter11_start:
     cpa "我虽非亲眼见到，"
     cpa "但是我相信，"
     cpa "一样曾经推动过世道的前行。"
-
     cpa "心性全部落在此地“开花结果”的人，"
     cpa "才可以在某些关键时刻，"
     cpa "说得出那些话。"
@@ -200,14 +190,11 @@ label chapter11_start:
     narrator "陈平安写到这里，又有所想。"
     narrator "他来到圆心附近的“善”“恶”二字附近。"
     narrator "复以炭笔缓缓补充了两句话。"
-
     narrator "在上边写了："
     narrator "愿意相信人生在世，并不都是“以物易物”。"
-
     narrator "在下边则写了："
     narrator "若是任何付出，只要没有实质回报，"
     narrator "那就是折损了“我”这个“一”的利益。"
-
     narrator "收起炭笔，陈平安继续想着。"
 
     cpa "一旦感知到受损，"
@@ -282,22 +269,17 @@ label chapter11_start:
     narrator "最左手边还留有一大块空白。"
     narrator "可是陈平安已经脸色惨白。"
     narrator "竟是有了筋疲力尽的迹象。"
-
     narrator "喝了一大口酒后，"
     narrator "他摇摇晃晃站起身。"
-
     narrator "手中木炭已经被磨得只有指甲盖大小。"
     narrator "陈平安稳了稳心神。"
     narrator "手指颤抖，写不下了。"
-
     narrator "他强撑一口气，抬起手臂，"
     narrator "抹了抹额头汗水。"
     narrator "想要蹲下身继续书写。"
     narrator "哪怕多一个字也好。"
-
     narrator "可是刚刚弯腰，"
     narrator "竟然一屁股坐在了地上。"
-
     narrator "陈平安一手将养剑葫随便放在地上。"
     narrator "另外一只手松开手指。"
     narrator "仅剩的那点木炭滚落在地。"
@@ -315,14 +297,182 @@ label chapter11_start:
     narrator "陈平安竭力站起身。"
     narrator "退出那个尚未补全炭字的圆圈。"
     narrator "死死盯着那个大圆。"
-
     narrator "最后视线凝聚在圆心地带，"
     narrator "自己最早写下的“善”“恶”二字之上。"
-
     narrator "陈平安摇摇晃晃，伸出一只手。"
     narrator "像是要抓住整个圆圈。"
-
     narrator "他几乎连自己都不知道在说什么了。"
     narrator "此时此景，形骸俱忘矣。"
 
+    cpa "是不是可以连善恶都不去谈？"
+    cpa "只说神人之分？"
+    cpa "本性？"
+    cpa "不然这个圆圈，"
+    cpa "还是很难真正站得住脚。"
+    cpa "这就需要……往上提起？"
+    cpa "而不是拘泥于书上道理，"
+    cpa "不是拘束于儒家学问，"
+    cpa "单纯去扩大这个圈子？"
+    cpa "而是往上拔高一些？"
+    cpa "若是如此，那我就懂了。"
+    cpa "根本不是我之前琢磨出来的那样。"
+    cpa "不是世间的道理有门槛、分高低。"
+    cpa "而是绕着这个圈子行走，"
+    cpa "不断去看。"
+    cpa "是心性有左右之别。"
+    cpa "同样不是说有人心在不同之处，"
+    cpa "就有了高下之分、云泥之别。"
+    cpa "故而三教圣人，各自所做之事，"
+    cpa "所谓的劝化之功，"
+    cpa "就是将不同区域的人心，"
+    cpa "搬山倒海，"
+    cpa "牵引到各自想要的区域中去。"
+    cpa "若是，先不往高处去看，"
+    cpa "不绕圈平地而行。"
+    cpa "只是借助顺序，"
+    cpa "往回退转一步来看。"
+    cpa "也不提种种本心，"
+    cpa "只说世道真实的本在。"
+    cpa "儒家学问，"
+    cpa "是在扩大和稳固“实物”区域。"
+    cpa "道家是在向上抬升这个世界，"
+    cpa "让我们人能够高出其余所有有灵万物。"
+
+    narrator "陈平安闭上眼睛，取出一枚竹简。"
+    narrator "上边刻着一位大儒，"
+    narrator "充满苍凉之意却依旧美好动人的文字。"
+    narrator "当时只是觉得想法奇怪却通透。"
+    narrator "如今看来，只要深究下去，"
+    narrator "竟是蕴含着一些道家真意了。"
+
+    cpa "盆水覆地，芥浮于水。"
+    cpa "蚂蚁依附于芥子以为绝境。"
+    cpa "须臾水干涸，"
+    cpa "才发现道路通达，"
+    cpa "无处不可去。"
+    cpa "道家所求，"
+    cpa "就是不要我们世人做那些心性低如蝼蚁的存在。"
+    cpa "一定要去更高处看待世间。"
+    cpa "一定要异于世间飞禽走兽和花草树木。"
+    cpa "那么佛家呢……"
+
+    narrator "陈平安伸出双手，画了一圆。"
+
+    cpa "配合儒家的广，道家的高，"
+    cpa "将十方世界，合而为一，"
+    cpa "并无疏漏。"
+    cpa "那个“一”，"
+    cpa "我是不是算知道一点点了？"
+
+    narrator "砰然一声。"
+    narrator "耗尽了浑身气力与精神的陈平安，"
+    narrator "后仰倒去。"
+    narrator "他闭上眼睛，满脸泪水。"
+    narrator "伸手抹了把脸，"
+    narrator "又伸出一只手掌，微微抬起。"
+    narrator "泪眼视线蒙眬。"
+    narrator "透过指缝间，浑浑噩噩。"
+    narrator "将睡未睡，已是心神憔悴至极。"
+    narrator "可心中最深处，满怀快意。"
+
+    cpa "云散天明谁点缀，"
+    cpa "天容海色本澄清。"
+
+    narrator "陈平安闭上眼睛，缓缓睡去。"
+    narrator "嘴角有些笑意。"
+
+    cpa "原来且不去分人心善恶，"
+    cpa "念此也可以一笑。"
+
+    narrator "在陈平安第一次在书简湖，"
+    narrator "大大方方躺在这座画了一个大圆圈、"
+    narrator "来不及擦掉一个炭字的渡口。"
+    narrator "在这青峡岛呼呼大睡、酣畅香甜之际，"
+    narrator "有一个依旧落拓不羁的青衫男子，"
+    narrator "与一个越来越动人的青衣马尾辫姑娘，"
+    narrator "几乎同时来到了渡口。"
+    narrator "两人没有任何言语。"
+    narrator "甚至连视线交会都没有。"
+    narrator "那个没有在太平山祖师堂提笔回信，"
+    narrator "而是亲自来到别洲异乡的读书人，"
+    narrator "捡起了陈平安的那粒木炭。"
+    narrator "他蹲在那个圆圈下边最左手边的地方。"
+    narrator "想要落笔，却犹豫不决。"
+    narrator "他非但没有懊恼，"
+    narrator "反而眼中全是笑意。"
+
+    zk "高山在前，"
+    zk "难道要我这个昔年书院君子，"
+    zk "只能绕道而行？"
+
+    narrator "阮秀则站在直线一端尽头的圆圈外。"
+    narrator "她吃着书简湖畔绿桐城的新糕点，"
+    narrator "声音有些含糊不清。"
+
+    rx "还差了一点点神人之分，"
+    rx "没有讲透。"
+
+    narrator "读书人手持木炭，抬起头。"
+    narrator "环顾四周。"
+
+    zk "好一个事到万难须放胆。"
+    zk "好一个酒酣胸胆尚开张。"
+    rx "寸心不昧，万法皆明。"
+
+    narrator "青衫男子这才转头，"
+    narrator "望向小口小口啃着糕点的阮秀。"
+
+    zk "你可莫要趁着陈平安熟睡，"
+    zk "占他便宜啊。"
+    zk "不过若是姑娘一定要做，"
+    zk "我钟魁可以背转过身。"
+    zk "这就叫君子有成人之美！"
+
+    narrator "阮秀这才看向他，有些疑惑。"
+
+    rx "你叫钟魁？"
+    rx "你这个人……鬼，比较奇怪。"
+    rx "我看不明白你。"
+
+    narrator "钟魁伸手绕过肩头，"
+    narrator "指了指那个鼾声如雷的账房先生。"
+
+    zk "这个家伙就懂我，"
+    zk "所以我来了。"
+
+    narrator "钟魁看着这座在他眼中，"
+    narrator "与世人绝不一样的书简湖。"
+
+    zk "世间岂能唯我钟魁一人是君子。"
+    zk "那世道得是多大的一个粪坑？"
+
+    rx "我知道你是想帮他。"
+    rx "但是我劝你，"
+    rx "不要留下来帮他。"
+    rx "会帮倒忙的。"
+
+    zk "当真？"
+
+    rx "你信我？"
+    
+    narrator "钟魁点了点头。"
+    narrator "阮秀吃完了糕点，拍拍手。"
+    narrator "走了。"
+    narrator "钟魁想了想，"
+    narrator "轻轻将那点木炭放回原处。"
+    narrator "起身后，凭空而写。"
+    narrator "在书简湖唯余八个字而已。"
+    narrator "然后也跟着离去，返回桐叶洲。"
+    narrator "已经不再是书院君子的读书人钟魁，"
+    narrator "乘兴而来，乘兴而归。"
+    narrator "他留下的那八个字，是："
+    narrator "诸事皆宜，百无禁忌。"
+
+
+
+ 
+        
+        
+        
     return
+
