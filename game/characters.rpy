@@ -13,7 +13,6 @@ define donsujing = Character("董水井")
 define c1 = Character("高煊")
 define xuluo = Character("许弱")
 define rx = Character("阮秀")
-define zk = Character("钟魁")
 define xxq = Character("徐小桥")
 define xhjs = Character("绣花江水神")
 define h1 = Character("吴鸢")
@@ -36,6 +35,8 @@ define hs = Character("红酥")
 define mxgx = Character("马姓鬼修")
 define lcr = Character("刘重润")
 define yh = Character("俞桧")
+define zk = Character("钟魁")
+define Lzm = Character("刘志茂")
 
 
 

@@ -157,9 +157,6 @@
     narrator "当年憋在肚子里的一些话，得与她讲一讲。"
 
 
-
-    cc "你陈平安不是喜欢讲道理吗，这次我就看看你还能不能讲。"
-
     jump chapter3_start
 
     return
