@@ -36,7 +36,7 @@ define mxgx = Character("马姓鬼修")
 define lcr = Character("刘重润")
 define yh = Character("俞桧")
 define zk = Character("钟魁")
-define Lzm = Character("刘志茂")
+define lzm = Character("刘志茂")
 
 
 
