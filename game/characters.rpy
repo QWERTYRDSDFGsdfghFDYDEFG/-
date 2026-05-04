@@ -39,6 +39,9 @@ define zk = Character("钟魁")
 define lzm = Character("刘志茂")
 define llc = Character("刘老成")
 define gs = Character("顾氏")
+define zyfs = Character("紫阳府修士")
+define jdf = Character("金丹妇人")
+define kjxn = Character("开襟小娘")
 
 
 

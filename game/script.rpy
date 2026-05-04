@@ -171,7 +171,7 @@ label start:
     cds"吃过了臭豆腐，喝过了酒，剑仙呢？"
 
     voice "audio/旁白9.mp3"
-    narrator"喊一声试试看？"
+    cds "喊一声试试看？"
 
     voice "audio/李宝瓶7.mp3"
     a "小师叔！"
