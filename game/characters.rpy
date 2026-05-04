@@ -37,6 +37,8 @@ define lcr = Character("刘重润")
 define yh = Character("俞桧")
 define zk = Character("钟魁")
 define lzm = Character("刘志茂")
+define llc = Character("刘老成")
+define gs = Character("顾氏")
 
 
 

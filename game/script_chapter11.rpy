@@ -469,9 +469,8 @@ label chapter11_start:
     narrator "诸事皆宜，百无禁忌。"
 
 
-
  
-        
+        jump chapter11_start
         
         
     return
