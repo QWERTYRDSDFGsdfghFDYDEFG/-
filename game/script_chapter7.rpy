@@ -1,4 +1,4 @@
-label chapter9_start:
+label chapter7_start:
 
     $ renpy.force_autosave()
 
@@ -992,7 +992,7 @@ label chapter9_start:
     narrator "咦？"
     narrator "自家老爷啥时候如此通情达理了？"
 
-    jump chapter11_start
+    jump chapter8_start
 
 
     return

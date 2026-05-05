@@ -1,4 +1,4 @@
-label chapter7_start:
+label chapter5_start:
 
     $ renpy.force_autosave()
 
@@ -800,7 +800,7 @@ label chapter7_start:
 
 
   
-    jump chapter8_start
+    jump chapter6_start
 
     
 

@@ -1,4 +1,4 @@
-label chapter4_start:
+label chapter3_start:
 
      $ renpy.force_autosave()
 
@@ -411,7 +411,7 @@ label chapter4_start:
 
      paqian "师傅，红烛镇好有好多.......好......玩"
 
-     jump chapter5_start
+     jump chapter4_start
 
 
 

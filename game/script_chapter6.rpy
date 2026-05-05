@@ -1,4 +1,4 @@
-label chapter8_start:
+label chapter6_start:
 
     $ renpy.force_autosave()
 
@@ -682,6 +682,6 @@ label chapter8_start:
     cpa "打不死，赶不走。"
 
 
-    jump chapter9_start
+    jump chapter7_start
  
     return

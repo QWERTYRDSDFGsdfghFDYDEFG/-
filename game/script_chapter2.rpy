@@ -157,9 +157,6 @@ label chapter2_start:
     narrator "当年憋在肚子里的一些话，得与她讲一讲。"
 
 
-
-    # Merged from script_chapter3.rpy
-
     wy "紫阳府到了，我们下船吧。"
 
     narrator "积香庙小神，拜见洞灵老祖，在此叩谢老祖的大恩大德！"
@@ -483,6 +480,6 @@ label chapter2_start:
     cpa "一下子就会被看穿，还不是要被打个半死。"
     cpa "你敢还手吗？"
 
-    jump chapter4_start
+    jump chapter3_start
 
     return

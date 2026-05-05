@@ -1,4 +1,4 @@
-label chapter5_start:
+label chapter4_start:
 
     $ renpy.force_autosave()
 
@@ -758,7 +758,7 @@ label chapter5_start:
     gc"哈哈，陈平安！你来了啊！"
 
 
-    jump chapter7_start
+    jump chapter5_start
 
 
     return
