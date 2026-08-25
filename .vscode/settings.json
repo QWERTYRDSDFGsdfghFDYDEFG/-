@@ -1,4 +1,7 @@
 {
+    "renpy.renpyExecutableLocation": "F:\\Tools\\renpy-8.5.3-sdk\\renpy.exe",
+    "renpy.diagnostics.diagnosticMode": "workspace",
+    "renpy.watchFoldersForChanges": true,
     "files.exclude": {
         "**/*.rpyc": true,
         "**/*.rpa": true,

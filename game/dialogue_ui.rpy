@@ -1,5 +1,7 @@
 default dialogue_ui_theme = None
 default dialogue_paralanguage = None
+default dialogue_pair_left = None
+default dialogue_pair_right = None
 
 
 init -5 python:
@@ -7,17 +9,17 @@ init -5 python:
         "speaker": {
             "window_style": "say_window_speaker",
             "what_style": "say_dialogue",
-            "what_color": "#f6efe4",
-            "name_color": "#f3efe7",
-            "name_background": "#15202adf",
-            "window_background": "#091018e2",
-            "accent_color": "#6f8ea3",
-            "accent_glow": "#6f8ea340",
-            "avatar_background": "#111a22f0",
-            "seal_background": "#243845f0",
-            "seal_color": "#e8f2f8",
-            "para_background": "#173243e6",
-            "para_color": "#d3e0e9",
+            "what_color": "#f2eadf",
+            "name_color": "#f4e7d4",
+            "name_background": "#32271fe8",
+            "window_background": "#15120fe9",
+            "accent_color": "#9a654a",
+            "accent_glow": "#c69a7040",
+            "avatar_background": "#201a15f2",
+            "seal_background": "#653a2fe8",
+            "seal_color": "#f1dfca",
+            "para_background": "#4d382be6",
+            "para_color": "#ead8c3",
         },
         "protagonist": {
             "window_style": "say_window_protagonist",
@@ -81,13 +83,8 @@ init -5 python:
         },
     }
 
-    # 有现成头像素材的角色直接显示裁切图，没有素材时回退为单字印章。
+    # 只显示画风和裁切已经适配对话框的头像；没有合格素材时保持纯文字布局。
     DIALOGUE_AVATAR_IMAGES = {
-        "陈平安": im.Scale(
-            im.Crop("lh/cpa/cpa_face_standard_01.png", 350, 40, 420, 420),
-            150,
-            150
-        ),
         "李宝瓶": im.Scale(
             im.Crop("images/chapter1/c1_01_lbp_return_v2.png", 920, 100, 420, 420),
             150,
@@ -98,8 +95,13 @@ init -5 python:
             150,
             150
         ),
+        "崔东山": im.Scale(
+            im.Crop("lh/cds/cds-v1.png", 520, 110, 620, 620),
+            150,
+            150
+        ),
         "裴钱": im.Scale(
-            im.Crop("images/chapter1/c1_08_pq_pose_v1.png", 540, 60, 420, 420),
+            im.Crop("images/chapter1/c1_08_pq_pose_v1.png", 810, 60, 420, 420),
             150,
             150
         ),
@@ -125,6 +127,17 @@ init -5 python:
         renpy.store.dialogue_paralanguage = None
 
 
+    # 在明确标记的连续对话中启用双人头像槽。未调用时保持原有单人布局。
+    def set_dialogue_pair(left=None, right=None):
+        renpy.store.dialogue_pair_left = left
+        renpy.store.dialogue_pair_right = right
+
+
+    def clear_dialogue_pair():
+        renpy.store.dialogue_pair_left = None
+        renpy.store.dialogue_pair_right = None
+
+
     def resolve_dialogue_theme(who):
         current_theme = renpy.store.dialogue_ui_theme
 
@@ -145,10 +158,41 @@ init -5 python:
         ui = dict(DIALOGUE_THEME_CONFIG.get(theme, DIALOGUE_THEME_CONFIG["speaker"]))
 
         ui["theme"] = theme
+        pair_left = renpy.store.dialogue_pair_left
+        pair_right = renpy.store.dialogue_pair_right
+        show_pair = (
+            bool(who)
+            and bool(pair_left)
+            and bool(pair_right)
+            and theme != "narration"
+            and not renpy.variant("small")
+        )
+
         ui["avatar"] = DIALOGUE_AVATAR_IMAGES.get(who)
-        ui["show_avatar"] = bool(who) and theme != "narration" and not renpy.variant("small")
+        ui["show_pair"] = show_pair
+        ui["show_avatar"] = bool(ui["avatar"]) and theme != "narration" and not show_pair and not renpy.variant("small")
         ui["show_name"] = bool(who) and theme not in ("thought", "protagonist_thought")
         ui["seal_text"] = who[:1] if who else ""
         ui["paralanguage"] = renpy.store.dialogue_paralanguage
 
+        if show_pair:
+            ui["pair_left"] = get_dialogue_pair_slot(pair_left, who, ui)
+            ui["pair_right"] = get_dialogue_pair_slot(pair_right, who, ui)
+
         return ui
+
+
+    def get_dialogue_pair_slot(name, who, ui):
+        is_active = bool(who) and name in who
+
+        return {
+            "name": name,
+            "avatar": DIALOGUE_AVATAR_IMAGES.get(name),
+            "seal_text": name[:1],
+            "active": is_active,
+            "alpha": 1.0 if is_active else 0.58,
+            "yoffset": 0 if is_active else 9,
+            "background": ui["avatar_background"] if is_active else "#171411e0",
+            "name_background": ui["accent_color"] if is_active else "#2a241fe0",
+            "name_color": ui["name_color"] if is_active else "#b6aa9b",
+        }

@@ -92,6 +92,27 @@ style frame:
 ##
 ## https://doc.renpy.cn/zh-CN/screen_special.html#say
 
+screen dialogue_pair_slot(slot, ui):
+    vbox:
+        style "say_pair_portrait"
+        at Transform(alpha=slot["alpha"], yoffset=slot["yoffset"])
+
+        frame:
+            style "say_pair_portrait_frame"
+            background slot["background"]
+
+            if slot["avatar"]:
+                add slot["avatar"] xalign 0.5 yalign 1.0
+            else:
+                text slot["seal_text"] style "say_avatar_seal" color ui["seal_color"]
+
+        frame:
+            style "say_pair_nameplate"
+            background slot["name_background"]
+
+            text slot["name"] style "say_pair_name" color slot["name_color"]
+
+
 screen say(who, what):
     $ ui = get_dialogue_ui(who)
 
@@ -139,7 +160,10 @@ screen say(who, what):
             hbox:
                 xfill True
                 yfill True
-                spacing 28
+                spacing 24
+
+                if ui["show_pair"]:
+                    use dialogue_pair_slot(ui["pair_left"], ui)
 
                 if ui["show_avatar"]:
                     frame:
@@ -155,7 +179,10 @@ screen say(who, what):
                             text ui["seal_text"] style "say_avatar_seal" color ui["seal_color"]
 
                 vbox:
-                    xfill True
+                    if ui["show_pair"]:
+                        xsize 1420
+                    else:
+                        xfill True
                     yalign 0.5
                     spacing 10
 
@@ -180,7 +207,11 @@ screen say(who, what):
                         id "what"
                         style ui["what_style"]
                         color ui["what_color"]
-                        xmaximum 1440
+                        xmaximum 1260
+                        xoffset (16 if not ui["show_avatar"] and not ui["show_pair"] else 0)
+
+                if ui["show_pair"]:
+                    use dialogue_pair_slot(ui["pair_right"], ui)
 
 
 ## 通过 Character 对象使名称框可用于样式化。
@@ -199,6 +230,10 @@ style namebox_label is say_label
 style say_nameplate is default
 style say_avatar_frame is default
 style say_avatar_seal is default
+style say_pair_portrait is vbox
+style say_pair_portrait_frame is default
+style say_pair_nameplate is default
+style say_pair_name is default
 style say_para_tag is default
 style say_window_speaker is default
 style say_window_protagonist is say_window_speaker
@@ -227,7 +262,7 @@ style namebox:
 
 style say_label:
     font gui.name_text_font
-    size 34
+    size 32
     bold True
     kerning 1.0
     outlines [(2, "#00000066", 0, 0)]
@@ -263,10 +298,10 @@ style say_para_text:
 style say_nameplate:
     xfit True
     yfit True
-    left_padding 20
-    right_padding 24
-    top_padding 8
-    bottom_padding 10
+    left_padding 16
+    right_padding 19
+    top_padding 6
+    bottom_padding 7
 
 style say_avatar_frame:
     xsize 166
@@ -283,6 +318,31 @@ style say_avatar_seal:
     xalign 0.5
     yalign 0.5
 
+style say_pair_portrait:
+    xsize 166
+    spacing 5
+
+style say_pair_portrait_frame:
+    xsize 166
+    ysize 166
+    left_padding 8
+    right_padding 8
+    top_padding 8
+    bottom_padding 8
+
+style say_pair_nameplate:
+    xfill True
+    ysize 34
+    left_padding 6
+    right_padding 6
+
+style say_pair_name:
+    font gui.name_text_font
+    size 22
+    bold True
+    xalign 0.5
+    yalign 0.5
+
 style say_para_tag:
     xfit True
     yfit True
@@ -295,17 +355,17 @@ style say_window_speaker:
     xalign 0.5
     xfill True
     yalign 1.0
-    ysize 344
-    left_padding 56
-    right_padding 62
-    top_padding 26
-    bottom_padding 28
+    ysize 306
+    left_padding 54
+    right_padding 58
+    top_padding 20
+    bottom_padding 46
 
 style say_window_protagonist:
-    ysize 352
+    ysize 286
 
 style say_window_narration:
-    ysize 300
+    ysize 282
     left_padding 88
     right_padding 88
     top_padding 24
@@ -362,12 +422,24 @@ screen choice(items):
 
     vbox:
         for i in items:
-            textbutton i.caption action i.action
+            button:
+                style "choice_button"
+                action i.action
+
+                fixed:
+                    frame:
+                        style "choice_button_mark"
+
+                    text i.caption:
+                        style "choice_button_text"
+                        xalign 0.5
+                        yalign 0.5
 
 
 style choice_vbox is vbox
 style choice_button is button
 style choice_button_text is button_text
+style choice_button_mark is empty
 
 style choice_vbox:
     xalign 0.5
@@ -378,9 +450,22 @@ style choice_vbox:
 
 style choice_button is default:
     properties gui.button_properties("choice_button")
+    background "#17130fe8"
+    hover_background "#56392de8"
+    selected_background "#56392de8"
+    insensitive_background "#17130fa0"
+    hover_xoffset 8
 
 style choice_button_text is default:
     properties gui.text_properties("choice_button")
+    outlines [(1, "#00000088", 0, 1)]
+
+style choice_button_mark:
+    background "#a55d47"
+    xsize 5
+    ysize 34
+    xpos 26
+    yalign 0.5
 
 
 ## 快捷菜单屏幕 ######################################################################
@@ -394,18 +479,19 @@ screen quick_menu():
 
     if quick_menu:
 
-        hbox:
-            style_prefix "quick"
-            style "quick_menu"
+        frame:
+            style "quick_menu_frame"
 
-            textbutton _("回退") action Rollback()
-            textbutton _("历史") action ShowMenu('history')
-            textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("自动") action Preference("auto-forward", "toggle")
-            textbutton _("保存") action ShowMenu('save')
-            textbutton _("快存") action QuickSave()
-            textbutton _("快读") action QuickLoad()
-            textbutton _("设置") action ShowMenu('preferences')
+            hbox:
+                style_prefix "quick"
+                style "quick_menu_buttons"
+
+                textbutton _("回退") action Rollback()
+                textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True)
+                textbutton _("自动") action Preference("auto-forward", "toggle")
+                textbutton _("快存") action QuickSave()
+                textbutton _("快读") action QuickLoad()
+                textbutton _("菜单") action ShowMenu()
 
 
 ## 此代码确保只要用户没有主动隐藏界面，就会在游戏中显示 quick_menu 屏幕。
@@ -415,6 +501,8 @@ init python:
 default quick_menu = True
 
 style quick_menu is hbox
+style quick_menu_frame is empty
+style quick_menu_buttons is hbox
 style quick_button is default
 style quick_button_text is button_text
 
@@ -422,8 +510,23 @@ style quick_menu:
     xalign 0.5
     yalign 1.0
 
+style quick_menu_frame:
+    xalign 0.5
+    yalign 1.0
+    yoffset -6
+    xpadding 8
+    ypadding 4
+    background "#0f0d0a78"
+
+style quick_menu_buttons:
+    spacing 3
+
 style quick_button:
     properties gui.button_properties("quick_button")
+    background None
+    hover_background "#8e563f78"
+    selected_background "#8e563f55"
+    xminimum 68
 
 style quick_button_text:
     properties gui.text_properties("quick_button")
@@ -442,14 +545,54 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+        xpos (92 if main_menu else gui.navigation_xpos)
+        yalign (0.55 if main_menu else 0.5)
 
         spacing gui.navigation_spacing
 
         if main_menu:
 
-            textbutton _("开始游戏") action Start()
+            textbutton _("继续问心"):
+                style "main_menu_navigation_button"
+                text_style "main_menu_navigation_button_text"
+                action Continue()
+
+            textbutton _("开始游戏"):
+                style "main_menu_navigation_button"
+                text_style "main_menu_navigation_button_text"
+                action Start()
+
+            textbutton _("读取旧档"):
+                style "main_menu_navigation_button"
+                text_style "main_menu_navigation_button_text"
+                action ShowMenu("load")
+
+            textbutton _("设置"):
+                style "main_menu_navigation_button"
+                text_style "main_menu_navigation_button_text"
+                action ShowMenu("preferences")
+
+            null height 18
+
+            hbox:
+                spacing 18
+
+                textbutton _("关于"):
+                    style "main_menu_secondary_button"
+                    text_style "main_menu_secondary_button_text"
+                    action ShowMenu("about")
+
+                if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+                    textbutton _("帮助"):
+                        style "main_menu_secondary_button"
+                        text_style "main_menu_secondary_button_text"
+                        action ShowMenu("help")
+
+                if renpy.variant("pc"):
+                    textbutton _("退出"):
+                        style "main_menu_secondary_button"
+                        text_style "main_menu_secondary_button_text"
+                        action Quit(confirm=False)
 
         else:
 
@@ -457,33 +600,37 @@ screen navigation():
 
             textbutton _("保存") action ShowMenu("save")
 
-        textbutton _("读取游戏") action ShowMenu("load")
+            textbutton _("读取游戏") action ShowMenu("load")
 
-        textbutton _("设置") action ShowMenu("preferences")
+            textbutton _("设置") action ShowMenu("preferences")
 
-        if _in_replay:
+            if _in_replay:
 
-            textbutton _("结束回放") action EndReplay(confirm=True)
+                textbutton _("结束回放") action EndReplay(confirm=True)
 
-        elif not main_menu:
+            else:
 
-            textbutton _("标题菜单") action MainMenu()
+                textbutton _("标题菜单") action MainMenu()
 
-        textbutton _("关于") action ShowMenu("about")
+            textbutton _("关于") action ShowMenu("about")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+            if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
-            ## “帮助”对移动设备来说并非必需或相关。
-            textbutton _("帮助") action ShowMenu("help")
+                ## “帮助”对移动设备来说并非必需或相关。
+                textbutton _("帮助") action ShowMenu("help")
 
-        if renpy.variant("pc"):
+            if renpy.variant("pc"):
 
-            ## 退出按钮在 iOS 上是被禁止使用的，在安卓和网页上也不是必要的。
-            textbutton _("退出") action Quit(confirm=not main_menu)
+                ## 退出按钮在 iOS 上是被禁止使用的，在安卓和网页上也不是必要的。
+                textbutton _("退出") action Quit(confirm=True)
 
 
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
+style main_menu_navigation_button is navigation_button
+style main_menu_navigation_button_text is navigation_button_text
+style main_menu_secondary_button is navigation_button
+style main_menu_secondary_button_text is navigation_button_text
 
 style navigation_button:
     size_group "navigation"
@@ -491,6 +638,39 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
+
+style main_menu_navigation_button:
+    xsize 330
+    ysize 58
+    left_padding 16
+    right_padding 16
+    background None
+    hover_background "#8f5b3d38"
+    selected_background "#8f5b3d28"
+
+style main_menu_navigation_button_text:
+    font gui.interface_text_font
+    size 38
+    color "#c8c0b5"
+    hover_color "#f0d4a8"
+    selected_color "#f0d4a8"
+    insensitive_color "#746f68"
+    outlines [(1, "#000000aa", 0, 1)]
+
+style main_menu_secondary_button:
+    xfit True
+    ysize 40
+    left_padding 4
+    right_padding 4
+    background None
+
+style main_menu_secondary_button_text:
+    font gui.interface_text_font
+    size 22
+    color "#8f8980"
+    hover_color "#d2ad7c"
+    selected_color "#d2ad7c"
+    outlines [(1, "#00000099", 0, 1)]
 
 
 ## 标题菜单屏幕 ######################################################################
@@ -504,7 +684,7 @@ screen main_menu():
     ## 此语句可确保替换掉任何其他菜单屏幕。
     tag menu
 
-    add gui.main_menu_background
+    use main_menu_live_background
 
     ## 此空框可使标题菜单变暗。
     frame:
@@ -514,17 +694,25 @@ screen main_menu():
     use navigation
 
     ## 独立中文题字。与 config.name 解耦，避免工程名直接占据主视觉。
-    vbox:
-        style "main_menu_title_group"
+    text _("剑来"):
+        style "main_menu_title_mark"
+        xpos 1570
+        xanchor 0.5
+        ypos 124
 
-        text _("剑来"):
-            style "main_menu_title_mark"
+    frame:
+        style "main_menu_title_rule"
+        xpos 1440
+        ypos 254
 
-        frame:
-            style "main_menu_title_rule"
+    text _("书简湖问心局"):
+        style "main_menu_title_subtitle"
+        xpos 1570
+        xanchor 0.5
+        ypos 278
 
-        text _("书简湖问心局"):
-            style "main_menu_title_subtitle"
+    text _("版本 [config.version]"):
+        style "main_menu_version"
 
 
 style main_menu_frame is empty
@@ -533,15 +721,15 @@ style main_menu_text is gui_text
 style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
 style main_menu_title_group is vbox
-style main_menu_title_mark is main_menu_text
-style main_menu_title_subtitle is main_menu_text
+style main_menu_title_mark is gui_text
+style main_menu_title_subtitle is gui_text
 style main_menu_title_rule is empty
 
 style main_menu_frame:
-    xsize 420
+    xsize 500
     yfill True
 
-    background "#08080666"
+    background "#08080626"
 
 style main_menu_vbox:
     xalign 1.0
@@ -557,36 +745,38 @@ style main_menu_title:
     properties gui.text_properties("title")
 
 style main_menu_version:
-    properties gui.text_properties("version")
+    font gui.interface_text_font
+    size 18
+    color "#8f8980"
+    outlines [(1, "#00000099", 0, 1)]
+    xalign 1.0
+    yalign 1.0
+    xoffset -24
+    yoffset -18
 
 style main_menu_title_group:
-    xpos 1370
-    xanchor 0.5
-    ypos 180
-    spacing 18
+    spacing 14
 
 style main_menu_title_mark:
     font gui.interface_text_font
-    size 108
-    color "#30271e"
+    size 100
+    color "#e2d9cc"
     kerning 12
     textalign 0.5
-    xalign 0.5
-    outlines [(1, "#f3ead899", 1, 2)]
+    outlines [(2, "#080909cc", 0, 2)]
 
 style main_menu_title_rule:
-    background "#9b5944"
+    background "#a7654d"
     xsize 260
     ysize 2
-    xalign 0.5
 
 style main_menu_title_subtitle:
     font gui.interface_text_font
-    size 38
-    color "#5f4d3b"
+    size 34
+    color "#b8ab9a"
     kerning 8
     textalign 0.5
-    xalign 0.5
+    outlines [(1, "#080909bb", 0, 1)]
 
 
 ## 游戏菜单屏幕 ######################################################################

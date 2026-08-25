@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "renpy",
+            "request": "launch",
+            "name": "Ren'Py：启动游戏",
+            "command": "run",
+            "args": []
+        },
+        {
+            "type": "renpy",
+            "request": "launch",
+            "name": "Ren'Py：打开 UI 调试场",
+            "command": "run",
+            "args": [
+                "--warp",
+                "game/ui_debug.rpy:2"
+            ]
+        }
+    ]
+}

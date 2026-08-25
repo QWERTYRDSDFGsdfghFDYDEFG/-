@@ -3,6 +3,7 @@ define cds = Character("崔东山")
 define c = Character("李槐")
 define zl = Character("朱敛")
 define peiqian = Character("裴钱")
+define cds_peiqian = Character("崔东山、裴钱")
 define cpa = Character("陈平安", callback=set_dialogue_theme("protagonist"))
 #陈平安的配音与人对话可以采用，心里不需要
 define k = Character("茅小冬")

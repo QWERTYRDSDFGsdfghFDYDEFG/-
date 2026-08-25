@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Ren'Py：启动游戏",
+            "type": "renpy",
+            "command": "run",
+            "problemMatcher": []
+        },
+        {
+            "label": "Ren'Py：检查项目（Lint）",
+            "type": "renpy",
+            "command": "lint",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        }
+    ]
+}

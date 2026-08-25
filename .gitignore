@@ -24,3 +24,6 @@
 /dialogue.tab
 /dialogue.txt
 /strings.json
+
+# Local secrets and credentials.
+/.env.local

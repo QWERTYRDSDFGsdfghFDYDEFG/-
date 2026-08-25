@@ -1,4 +1,5 @@
 default current_mood_key = "a"
+default mood_hud_expanded = False
 
 default mood_profiles = {
     "a": {
@@ -51,6 +52,20 @@ init python:
 
     def clamp_mood_score(value):
         return max(0, min(100, int(value)))
+
+    def mood_state_label(value):
+        score = clamp_mood_score(value)
+
+        if score < 25:
+            return "压抑"
+        if score < 45:
+            return "沉重"
+        if score < 60:
+            return "平静"
+        if score < 75:
+            return "坚定"
+
+        return "释然"
 
     def adjust_mood(character_key, delta, detail=None):
         profile = mood_profiles.get(character_key, {
@@ -117,11 +132,11 @@ screen mood_bar(value, width=170, height=12):
         xsize width
         ysize height
 
-        add Solid("#2b3340"):
+        add Solid("#332c25"):
             xsize width
             ysize height
 
-        add Solid("#ffd36a"):
+        add Solid("#c9a061"):
             xsize int(width * value / 100.0)
             ysize height
 
@@ -131,34 +146,43 @@ screen mood_hud():
     if not main_menu:
         $ profile = mood_profiles.get(current_mood_key, {"score": 50})
         $ score = profile.get("score", 50)
+        $ state_text = mood_state_label(score)
 
         frame:
             xalign 0.985
             yalign 0.018
-            xmaximum 300
-            padding (14, 9)
-            background Solid("#10151db0")
+            xmaximum 260
+            padding (8, 6)
+            background Solid("#15120f9c")
 
             button:
                 action ShowMenu("mood_status")
+                hovered SetVariable("mood_hud_expanded", True)
+                unhovered SetVariable("mood_hud_expanded", False)
                 background None
-                hover_background Solid("#ffffff18")
-                padding (8, 4)
+                hover_background Solid("#c9a06118")
+                padding (8, 3)
 
-                hbox:
-                    spacing 10
-                    yalign 0.5
+                if mood_hud_expanded:
+                    hbox:
+                        spacing 10
+                        yalign 0.5
 
-                    text "心境":
-                        size 22
-                        color "#ffffff"
-                        font gui.interface_text_font
+                        text "心境":
+                            size 20
+                            color "#eadfce"
+                            font gui.interface_text_font
 
-                    use mood_bar(score, 120, 10)
+                        use mood_bar(score, 92, 8)
 
-                    text "[score]":
-                        size 22
-                        color "#ffd36a"
+                        text "[state_text]":
+                            size 20
+                            color "#d5b174"
+                            font gui.interface_text_font
+                else:
+                    text "心境  [state_text]":
+                        size 19
+                        color "#d8ccba"
                         font gui.interface_text_font
 
 screen mood_status():

@@ -86,7 +86,7 @@ define gui.title_text_size = 75
 ## 标题和游戏菜单 #####################################################################
 
 ## 标题菜单和游戏菜单使用的图像。
-define gui.main_menu_background = "gui/main_menu_ink_v1.png"
+define gui.main_menu_background = "gui/main_menu_shujianhu_v1.png"
 define gui.game_menu_background = "gui/game_menu_ink_v1.png"
 
 
@@ -176,10 +176,11 @@ define gui.confirm_button_text_xalign = 0.5
 
 define gui.page_button_borders = Borders(15, 6, 15, 6)
 
-define gui.quick_button_borders = Borders(15, 6, 15, 0)
-define gui.quick_button_text_size = 21
-define gui.quick_button_text_idle_color = gui.idle_small_color
-define gui.quick_button_text_selected_color = gui.accent_color
+define gui.quick_button_borders = Borders(10, 4, 10, 4)
+define gui.quick_button_text_size = 19
+define gui.quick_button_text_idle_color = '#d8ccbab8'
+define gui.quick_button_text_hover_color = '#fff0d8'
+define gui.quick_button_text_selected_color = '#d5a56f'
 
 ## 您还可以通过添加正确命名的变量来添加自己的定制。例如，您可以将以下几行取消注
 ## 释来设置导航按钮的宽度。
@@ -191,16 +192,16 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ##
 ## 游戏内菜单使用的选项按钮。
 
-define gui.choice_button_width = 1185
-define gui.choice_button_height = None
+define gui.choice_button_width = 1120
+define gui.choice_button_height = 82
 define gui.choice_button_tile = False
-define gui.choice_button_borders = Borders(150, 8, 150, 8)
+define gui.choice_button_borders = Borders(28, 10, 28, 10)
 define gui.choice_button_text_font = gui.text_font
-define gui.choice_button_text_size = gui.text_size
+define gui.choice_button_text_size = 34
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = '#888888'
-define gui.choice_button_text_hover_color = "#ffffff"
-define gui.choice_button_text_insensitive_color = '#8888887f'
+define gui.choice_button_text_idle_color = '#e0d4c3'
+define gui.choice_button_text_hover_color = '#fff3df'
+define gui.choice_button_text_insensitive_color = '#9c918380'
 
 
 ## 存档按钮 ########################################################################

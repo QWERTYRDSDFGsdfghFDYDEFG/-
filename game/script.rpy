@@ -6,6 +6,8 @@ label start:
 
     narrator "李宝瓶快步穿过深夜庭院，停在崔东山房门前，抬手敲了敲门。"
 
+    $ set_dialogue_pair("李宝瓶", "崔东山")
+
     voice voice_id("voice.scn_0001_midnight_courtyard_return.lbp.0001")
     a "三天后小师叔就要离开山崖书院了。李槐、裴钱他们最近经常偷偷摸摸聚在一起，就连小师叔都时不时失踪，唉"
 
@@ -45,6 +47,8 @@ label start:
 
     voice voice_id("voice.scn_0002_midnight_lake.cds.0003")
     cds "这样啊。"
+
+    $ clear_dialogue_pair()
 
     scene bg c1_03_lh_entry_v1
     with trans_illusion
@@ -129,6 +133,8 @@ label start:
     scene bg c1_09_platform_duet_v1
     with trans_short
 
+    $ set_dialogue_pair("裴钱", "崔东山")
+
     voice voice_id("voice.scn_0006_peiqian3.pq.0001")
     peiqian "江湖没什么好的，也就酒还行。酒呢，来来来！谁来与我共饮这江湖酒"
 
@@ -183,7 +189,9 @@ label start:
     cds "吃过了臭豆腐，喝过了酒，剑仙呢？"
 
     voice voice_id("voice.scn_0006_peiqian3.narr.0001")
-    cds "喊一声试试看？"
+    cds_peiqian "喊一声试试看？"
+
+    $ clear_dialogue_pair()
 
     voice voice_id("voice.scn_0006_peiqian3.lbp.0001")
     a "小师叔！"
